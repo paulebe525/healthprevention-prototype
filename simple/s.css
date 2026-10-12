@@ -1,0 +1,59 @@
+:root{--navy:#1e4e6b;--teal:#38947d;--tealdk:#2a7462;--ink:#14212b;--mute:#3f5260;--bg:#f6faf9;--line:#d8e4e1}
+*{box-sizing:border-box}html{font-size:18px}
+body{margin:0;font-family:Figtree,"Noto Sans Tamil",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+h1,h2,h3{font-family:Outfit,"Noto Sans Tamil",sans-serif;color:var(--navy);line-height:1.2;margin:0 0 .5em}
+h1{font-size:2.3rem;font-weight:800}h2{font-size:1.7rem;font-weight:700}h3{font-size:1.25rem}
+a{color:var(--navy)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.bar{display:flex;align-items:center;gap:14px;min-height:68px}
+.logo{font-family:Outfit;font-weight:800;font-size:1.1rem;line-height:1.2;color:var(--navy);text-decoration:none;margin-right:auto}
+nav.main{display:none;gap:6px}nav.main a{padding:12px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+nav.main a[aria-current]{background:#e6f2ef}
+.lang{display:flex;border:2px solid var(--navy);border-radius:999px;overflow:hidden}
+.lang button{min-height:44px;min-width:56px;padding:0 12px;white-space:nowrap;border:0;background:#fff;color:var(--navy);font:700 .95rem Figtree,"Noto Sans Tamil";cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--navy);color:#fff}
+.menu{min-height:48px;min-width:48px;border:2px solid var(--line);background:#fff;border-radius:12px;font-size:1.4rem;cursor:pointer}
+#mnav{display:none;padding:8px 22px 18px;background:#fff;border-bottom:1px solid var(--line)}#mnav.open{display:block}
+#mnav a{display:block;padding:14px 4px;font-size:1.15rem;font-weight:600;text-decoration:none;border-bottom:1px solid var(--line)}
+@media(min-width:900px){nav.main{display:flex}.menu{display:none}h1{font-size:3.2rem}}
+.hero{padding:44px 0 36px;text-align:center}
+.hero p.lead{font-size:1.25rem;color:var(--mute);max-width:30ch;margin:0 auto 28px}
+.paths{display:grid;gap:16px;max-width:900px;margin:0 auto}
+@media(min-width:900px){.paths{grid-template-columns:repeat(3,1fr)}}
+.path{display:flex;align-items:center;gap:16px;padding:22px;border-radius:18px;text-decoration:none;min-height:96px;text-align:left;border:2px solid var(--line);background:#fff;color:var(--navy)}
+.path.primary{background:var(--teal);border-color:var(--teal);color:#fff}
+.path .ic{font-size:2rem;width:56px;height:56px;border-radius:14px;display:grid;place-items:center;background:#e6f2ef;flex:none}
+.path.primary .ic{background:rgba(255,255,255,.2)}
+.path b{display:block;font-family:Outfit;font-size:1.35rem}.path span{font-size:1rem}
+.path.primary span{color:#f0fbf7}
+section{padding:44px 0}section.alt{background:#fff;border-block:1px solid var(--line)}
+.grid{display:grid;gap:16px}@media(min-width:700px){.grid{grid-template-columns:repeat(2,1fr)}}@media(min-width:1000px){.grid.g3{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border:2px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:6px}
+.card p{margin:0;color:var(--mute)}
+.card a.more{margin-top:auto;padding-top:10px;font-weight:700;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 28px;border-radius:14px;background:var(--teal);color:#fff;font:700 1.1rem Figtree,"Noto Sans Tamil";text-decoration:none;border:0;cursor:pointer}
+.btn:hover{background:var(--tealdk)}.btn.ghost{background:#fff;color:var(--navy);border:2px solid var(--navy)}
+.center{text-align:center}
+.trust{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
+.trust span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-weight:600;font-size:.95rem}
+footer{background:var(--navy);color:#e8f1f5;padding:40px 0 30px;font-size:.95rem}
+footer a{color:#fff;display:inline-block;padding:8px 0;min-height:44px}
+.fcols{display:grid;gap:22px}@media(min-width:800px){.fcols{grid-template-columns:2fr 1fr 1fr}}
+footer h3{color:#fff;font-size:1.05rem}
+.prog{height:12px;background:#dfe9e6;border-radius:99px;overflow:hidden}.prog i{display:block;height:100%;background:var(--teal);transition:width .3s}
+.qbox{max-width:640px;margin:0 auto;padding:30px 0 60px}
+.qcount{font-weight:700;color:var(--mute);margin:10px 0 24px}
+.opt{display:block;width:100%;text-align:left;min-height:64px;padding:16px 20px;margin-bottom:12px;border:2px solid var(--line);border-radius:14px;background:#fff;font:600 1.1rem Figtree,"Noto Sans Tamil";color:var(--ink);cursor:pointer}
+.opt:hover,.opt:focus{border-color:var(--teal);outline:none}.opt.sel{border-color:var(--teal);background:#e6f2ef}
+.back{background:none;border:0;color:var(--navy);font:700 1rem Figtree;min-height:44px;cursor:pointer;padding:0}
+.result{background:#fff;border:2px solid var(--line);border-radius:18px;padding:28px;text-align:center}
+.score{font:800 3.5rem Outfit;color:var(--navy)}
+.band{display:inline-block;padding:8px 18px;border-radius:99px;font-weight:700;margin-bottom:12px}
+.tile{display:flex;gap:14px;align-items:center;background:#fff;border:2px solid var(--line);border-radius:16px;padding:18px;text-decoration:none;min-height:84px;color:var(--navy)}
+.tile .ic{font-size:1.8rem;width:52px;height:52px;border-radius:12px;background:#e6f2ef;display:grid;place-items:center;flex:none}
+.tile b{font-family:Outfit;font-size:1.15rem;display:block}.tile small{color:var(--mute);font-size:.95rem}
+.read{background:#fff;border:2px solid var(--line);border-radius:16px;padding:22px}
+.tag{display:inline-block;background:#e6f2ef;color:var(--tealdk);font-weight:700;font-size:.85rem;padding:4px 12px;border-radius:99px}
+.note{background:#fff8e6;border:1px solid #ecd9a6;border-radius:12px;padding:12px 16px;font-size:.95rem;color:#5a4610}
+:focus-visible{outline:3px solid #f2a900;outline-offset:2px}
