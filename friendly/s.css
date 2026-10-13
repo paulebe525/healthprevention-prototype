@@ -1,0 +1,63 @@
+/* Friendly design system. Tokens: see DESIGN.md */
+:root{--navy:#1e4e6b;--teal:#2f8270;--teal-b:#38947d;--orange:#c4561b;--orange-b:#ff8a3d;--green:#2f8a55;--green-b:#6cc48a;
+--peach:#ffe3d3;--mint:#d9f4e6;--sky:#dcefff;--butter:#fff2c2;--cream:#fffaf2;--card:#fff;--ink:#1b2f3e;--mute:#4b5f6e;
+--r:28px;--r-lg:40px;--sh:0 2px 0 rgba(30,78,107,.05),0 18px 40px -22px rgba(30,78,107,.35);--bounce:cubic-bezier(.34,1.56,.64,1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:18px/1.65 Figtree,'Noto Sans Tamil',system-ui,sans-serif;color:var(--ink);background:var(--cream);overflow-x:hidden}
+h1,h2,h3{font-family:Nunito,'Noto Sans Tamil',sans-serif;line-height:1.15;margin:0 0 .4em;color:var(--navy);font-weight:900;overflow-wrap:anywhere}h1{font-size:clamp(2.2rem,6vw,3.8rem)}h2{font-size:clamp(1.7rem,4vw,2.5rem)}h3{font-size:1.3rem;font-weight:800}
+:lang(ta) h1{font-size:clamp(1.8rem,5vw,3rem);line-height:1.3}:lang(ta) h2{font-size:clamp(1.4rem,3.4vw,2.1rem);line-height:1.3}:lang(ta) h3{font-size:1.12rem;line-height:1.35}
+a{color:inherit}.wrap{max-width:1160px;margin:0 auto;padding:0 20px}section{padding:72px 0}.center{text-align:center}
+.eyebrow{display:inline-block;font:800 .9rem Nunito,'Noto Sans Tamil',sans-serif;color:var(--teal);background:var(--mint);padding:6px 14px;border-radius:999px;margin-bottom:14px}
+.skip{position:absolute;left:-999px}.skip:focus{left:10px;top:10px;z-index:99;background:#fff;padding:8px}
+:focus-visible{outline:3px solid var(--orange-b);outline-offset:3px;border-radius:12px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,250,242,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.bar{display:flex;align-items:center;gap:12px;height:72px}.logo{display:flex;align-items:center;gap:10px;font:900 1.25rem Nunito,'Noto Sans Tamil',sans-serif;color:var(--navy);text-decoration:none;margin-right:auto}
+.logo i{width:40px;height:40px;border-radius:50% 50% 50% 14px;background:var(--orange-b);display:grid;place-items:center;color:#fff;font-style:normal;transition:transform .4s var(--bounce)}.logo:hover i{transform:rotate(-12deg) scale(1.1)}
+nav.main{display:none;gap:4px}nav a{text-decoration:none;font-weight:700;padding:10px 16px;border-radius:999px;font-size:1rem;color:var(--navy)}nav a:hover{background:var(--butter)}nav a[aria-current]{background:var(--navy);color:#fff}
+.lang{display:flex;background:#fff;border-radius:999px;padding:4px;box-shadow:var(--sh)}.lang button,.menu{border:0;background:none;font:800 .95rem Nunito,'Noto Sans Tamil',sans-serif;padding:8px 12px;border-radius:999px;cursor:pointer;color:var(--navy);min-height:44px;min-width:44px}.lang button[aria-pressed=true]{background:var(--teal);color:#fff}
+.menu{background:#fff;box-shadow:var(--sh);font-size:1.2rem}#mnav{display:none;padding:8px 20px 16px}#mnav.open{display:grid}#mnav a{padding:14px}
+@media(min-width:1000px){nav.main{display:flex}.menu{display:none}}
+.btn{display:inline-flex;align-items:center;gap:10px;justify-content:center;min-height:58px;padding:0 30px;border-radius:999px;border:0;font:800 1.08rem Nunito,'Noto Sans Tamil',sans-serif;text-decoration:none;cursor:pointer;background:var(--teal);color:#fff;box-shadow:0 6px 0 #1f5c4f;transition:transform .25s var(--bounce),box-shadow .2s}
+.btn:hover{transform:translateY(-3px) scale(1.03)}.btn:active{transform:translateY(4px) scale(.97);box-shadow:0 2px 0 #1f5c4f}
+.btn.light,.btn.navy{background:var(--navy);color:#fff;box-shadow:0 6px 0 #10324a}.btn.light:active,.btn.navy:active{box-shadow:0 2px 0 #10324a}
+.btn.ghost{background:var(--orange-b);color:#3a1600;box-shadow:0 6px 0 #c4561b}.btn.ghost:active{box-shadow:0 2px 0 #c4561b}
+.hero{position:relative;overflow:hidden;padding:48px 0 90px;background:radial-gradient(60% 70% at 85% 30%,var(--peach),transparent 70%),radial-gradient(50% 60% at 5% 90%,var(--mint),transparent 70%)}
+.hero .wrap{display:grid;gap:24px;align-items:center}@media(min-width:960px){.hero .wrap{grid-template-columns:1.1fr .9fr}.hero{padding:80px 0 120px}}
+.hero .lead{font-size:1.25rem;color:var(--mute);max-width:36ch}.hero .ctas{display:flex;flex-wrap:wrap;gap:16px;margin:28px 0}
+.chips{display:flex;flex-wrap:wrap;gap:10px}.chips>span{background:#fff;padding:8px 16px;border-radius:999px;font-weight:700;font-size:.95rem;box-shadow:var(--sh);color:var(--green)}
+.art{width:100%;max-width:460px;justify-self:center}
+.fl{animation:float 6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}.f2{animation-delay:-2s}.f3{animation-delay:-4s}.heart{animation:beat 2.4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-12px) rotate(2deg)}}@keyframes beat{0%,100%{transform:scale(1)}10%{transform:scale(1.12)}20%{transform:scale(1)}30%{transform:scale(1.08)}}
+.grid{display:grid;gap:22px}@media(min-width:700px){.g2{grid-template-columns:1fr 1fr}.g3,.g4{grid-template-columns:repeat(2,1fr)}}@media(min-width:1000px){.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}}
+.card{background:var(--card);border-radius:var(--r);padding:30px;box-shadow:var(--sh);transition:transform .35s var(--bounce),box-shadow .3s;text-decoration:none;display:block}
+a.card:hover,.tile:hover{transform:translateY(-6px) rotate(-.5deg)}
+.paths{margin-top:-50px;position:relative;z-index:2}.paths .card:nth-child(1){background:var(--mint)}.paths .card:nth-child(2){background:var(--peach)}.paths .card:nth-child(3){background:var(--sky)}
+.path .ic,.tile .ic,.card .ic{width:64px;height:64px;border-radius:50% 50% 50% 18px;display:grid;place-items:center;font-size:1.8rem;margin-bottom:16px;background:#fff}
+.path p,.card p{color:var(--mute);margin:0}.go{display:inline-block;margin-top:14px;font-weight:800;color:var(--teal);transition:transform .3s var(--bounce)}a:hover .go{transform:translateX(6px)}
+.t-mint{background:var(--mint)}.t-sky{background:var(--sky)}.t-amber{background:var(--butter)}.t-coral{background:var(--peach)}
+.tile{border-radius:var(--r);padding:20px;text-decoration:none;display:flex;gap:14px;align-items:center;transition:transform .35s var(--bounce);font:800 1.08rem Nunito,'Noto Sans Tamil',sans-serif;color:var(--navy);min-height:96px}.tile .ic{margin:0;flex:none;width:56px;height:56px;font-size:1.6rem}
+.steps{counter-reset:s}.step{position:relative;padding-top:84px}.step:before{counter-increment:s;content:counter(s);position:absolute;top:24px;left:30px;width:46px;height:46px;border-radius:50% 50% 50% 14px;color:#fff;font:900 1.3rem Nunito,sans-serif;display:grid;place-items:center;background:var(--teal)}
+.step:nth-child(2):before{background:var(--orange)}.step:nth-child(3):before{background:var(--green)}.step:nth-child(4):before{background:var(--navy)}
+.band{background:var(--mint);border-radius:var(--r-lg);padding:40px 26px;display:grid;gap:28px;position:relative;overflow:hidden}.band:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:var(--butter);right:-80px;top:-90px;z-index:0}.band>*{position:relative;z-index:1}@media(min-width:900px){.band{grid-template-columns:1.2fr 1fr;padding:56px}}
+.band p{color:var(--mute)}.band ul{padding:0;list-style:none;margin:16px 0}.band li{padding:8px 0 8px 40px;position:relative;font-weight:600}.band li:before{content:"✓";position:absolute;left:0;top:9px;width:28px;height:28px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-size:.85rem;font-weight:900}
+.mock{background:#fff;border-radius:var(--r);padding:22px;font-size:.98rem;box-shadow:var(--sh)}.mock p{color:var(--mute)}.mock .row{background:var(--cream);border-radius:18px;padding:12px 14px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.pill{border-radius:999px;padding:3px 12px;font-weight:800;font-size:.88rem;white-space:nowrap}.red{background:#ffdcd5;color:#8c2414}.amb{background:#fff0c2;color:#6b4a00}.grn{background:var(--mint);color:#145c45}
+details{background:#fff;border-radius:22px;box-shadow:var(--sh);margin-bottom:14px;padding:6px 24px}summary{font:800 1.08rem Nunito,'Noto Sans Tamil',sans-serif;color:var(--navy);min-height:60px;display:flex;align-items:center;cursor:pointer;list-style:none}summary::-webkit-details-marker{display:none}
+summary:after{content:"+";margin-left:auto;width:34px;height:34px;flex:none;border-radius:50%;background:var(--butter);display:grid;place-items:center;font-size:1.3rem;transition:transform .35s var(--bounce)}details[open] summary:after{transform:rotate(135deg)}
+footer{background:var(--sky);color:var(--ink);padding:56px 0 28px;margin-top:60px;border-radius:var(--r-lg) var(--r-lg) 0 0}footer a{color:var(--navy);text-decoration:none;display:inline-block;padding:6px 0;font-weight:600}footer a:hover{text-decoration:underline}.fcols{display:grid;gap:28px}@media(min-width:800px){.fcols{grid-template-columns:2fr 1fr 1fr}}.fine{border-top:2px dashed rgba(30,78,107,.18);margin-top:30px;padding-top:20px;font-size:.95rem;color:var(--mute)}
+.reveal{opacity:0;transform:translateY(30px) scale(.97);transition:opacity .6s,transform .7s var(--bounce)}.reveal.in{opacity:1;transform:none}
+#lp{position:fixed;inset:auto 16px 16px 16px;z-index:90;max-width:400px;margin:0 auto;background:#fff;border-radius:32px;box-shadow:0 30px 60px -20px rgba(30,78,107,.45);padding:26px;text-align:center;animation:pop .55s var(--bounce)}#lp[hidden]{display:none}#lp .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}#lp h3{font-size:1.5rem;margin-top:6px}
+@keyframes pop{from{transform:translateY(40px) scale(.9);opacity:0}}
+.qwrap{max-width:720px;margin:0 auto;padding:36px 20px 60px}.qtop{display:flex;align-items:center;gap:16px;margin-bottom:22px}.back{border:0;background:#fff;box-shadow:var(--sh);border-radius:999px;min-height:48px;padding:0 18px;font:800 1rem Nunito,'Noto Sans Tamil',sans-serif;cursor:pointer;color:var(--navy)}
+.prog{flex:1;height:16px;background:var(--butter);border-radius:99px;overflow:hidden}.prog i{display:block;height:100%;background:var(--teal-b);border-radius:99px;transition:width .6s var(--bounce)}
+.qcard{background:#fff;border-radius:36px;box-shadow:var(--sh);padding:32px 26px;animation:qin .5s var(--bounce)}@keyframes qin{from{opacity:0;transform:translateX(40px) scale(.96)}}.qn{color:var(--orange);font-weight:800}
+.opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;border:3px solid transparent;background:var(--cream);border-radius:24px;min-height:68px;padding:14px 18px;margin-top:12px;font:700 1.08rem Figtree,'Noto Sans Tamil',sans-serif;color:var(--ink);cursor:pointer;transition:transform .25s var(--bounce),background .2s}
+.opt:hover{background:var(--mint);transform:scale(1.02)}.opt:active{transform:scale(.97)}.opt b{width:38px;height:38px;flex:none;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--teal);font-family:Nunito}.opt.sel{background:var(--teal);color:#fff;border-color:#1f5c4f}
+.gauge{width:280px;max-width:100%;display:block;margin:0 auto}.gauge .arc{transition:stroke-dashoffset 1.6s var(--bounce)}.gauge .needle{transition:transform 1.6s var(--bounce);transform-origin:140px 150px}
+.rband{display:inline-block;border-radius:999px;padding:8px 22px;font:900 1.2rem Nunito,'Noto Sans Tamil',sans-serif}.ring circle{transition:stroke-dashoffset 1.4s ease}
+.bd{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:2px dashed var(--butter)}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+@media(max-width:520px){.bar{gap:8px}.logo span{display:none}.lang button{padding:8px 10px}.art{max-width:320px}.hero .ctas .btn{flex:1 1 100%}.card{padding:24px}}
+header{background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}header.sc{background:rgba(255,250,242,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 6px 20px -16px rgba(30,78,107,.5)}
+body>header+#lp+main>.hero:first-child,main>.hero:first-child{margin-top:-72px;padding-top:120px}
+.hero:after{content:"";position:absolute;left:-5%;right:-5%;bottom:-2px;height:70px;background:var(--cream);border-radius:50% 50% 0 0/100% 100% 0 0}
+.shot *,.shot *:before,.shot *:after{animation:none!important;transition:none!important}#lp{box-shadow:0 0 0 100vmax rgba(30,78,107,.28),0 30px 60px -20px rgba(30,78,107,.45)}
